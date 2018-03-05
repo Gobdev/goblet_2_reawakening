@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scripts/MC.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=2]
@@ -14,13 +14,14 @@
 [ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=13]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=14]
-[ext_resource path="res://Sprites/background.png" type="Texture" id=15]
-[ext_resource path="res://tilesets/tileset2NOCOLL.tres" type="TileSet" id=16]
-[ext_resource path="res://jungledirt.tres" type="TileSet" id=17]
-[ext_resource path="res://tilesets/tileset2.tres" type="TileSet" id=18]
-[ext_resource path="res://Scripts/Teleporter.gd" type="Script" id=19]
-[ext_resource path="res://Audio/Tense Situation.wav" type="AudioStream" id=20]
-[ext_resource path="res://Scripts/Music.gd" type="Script" id=21]
+[ext_resource path="res://Audio/FootSTEPS FINAL FUCKJURJHBA.wav" type="AudioStream" id=15]
+[ext_resource path="res://Sprites/background.png" type="Texture" id=16]
+[ext_resource path="res://tilesets/tileset2NOCOLL.tres" type="TileSet" id=17]
+[ext_resource path="res://jungledirt.tres" type="TileSet" id=18]
+[ext_resource path="res://tilesets/tileset2.tres" type="TileSet" id=19]
+[ext_resource path="res://Scripts/Teleporter.gd" type="Script" id=20]
+[ext_resource path="res://Audio/Tense Situation.wav" type="AudioStream" id=21]
+[ext_resource path="res://Scripts/Music.gd" type="Script" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -47,7 +48,7 @@ height = 34.7156
 custom_solver_bias = 0.0
 extents = Vector2( 16, 30 )
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 [node name="MC" type="KinematicBody2D" parent="." index="0"]
 
@@ -101,6 +102,14 @@ editor_draw_drag_margin = true
 script = ExtResource( 14 )
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
+[node name="Footsteps" type="AudioStreamPlayer" parent="MC" index="3"]
+
+stream = ExtResource( 15 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
 [node name="Background" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
@@ -112,7 +121,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 show_behind_parent = true
 position = Vector2( 310, 70 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -123,7 +132,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( 311.001, -281 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -134,7 +143,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( 910, 70 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -145,7 +154,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( 911.001, -281 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -156,7 +165,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( -180, 70 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -167,7 +176,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( -178.999, -281 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -178,7 +187,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( -520, 70 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -189,7 +198,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( -518.999, -281 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -200,7 +209,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( -1120, 70 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -211,7 +220,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( -1120, -280 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -222,7 +231,7 @@ __meta__ = {
 show_behind_parent = true
 position = Vector2( -1760, -10 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite13" type="Sprite" parent="Background" index="11"]
@@ -230,7 +239,7 @@ _sections_unfolded = [ "Visibility" ]
 show_behind_parent = true
 position = Vector2( -1760, -280 )
 scale = Vector2( 1.67188, 1.65741 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="TileMapNOCOLL" type="TileMap" parent="Background" index="12"]
@@ -238,7 +247,7 @@ _sections_unfolded = [ "Visibility" ]
 self_modulate = Color( 0.388235, 0.298039, 0.298039, 1 )
 show_behind_parent = true
 mode = 0
-tile_set = ExtResource( 16 )
+tile_set = ExtResource( 17 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -265,7 +274,7 @@ __meta__ = {
 
 self_modulate = Color( 0.390625, 0.299072, 0.299072, 1 )
 mode = 0
-tile_set = ExtResource( 17 )
+tile_set = ExtResource( 18 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -290,7 +299,7 @@ __meta__ = {
 
 self_modulate = Color( 0.388235, 0.298039, 0.298039, 1 )
 mode = 0
-tile_set = ExtResource( 18 )
+tile_set = ExtResource( 19 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -321,7 +330,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporter" index="0"]
 
@@ -330,12 +339,12 @@ shape = SubResource( 3 )
 
 [node name="Music" type="AudioStreamPlayer" parent="." index="4"]
 
-stream = ExtResource( 20 )
+stream = ExtResource( 21 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
 bus = "Master"
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 
 [connection signal="finished" from="Music" to="Music" method="_on_Music_finished"]
 

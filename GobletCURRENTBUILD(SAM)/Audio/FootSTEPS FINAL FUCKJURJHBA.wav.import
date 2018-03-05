@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FootSTEPS FINAL FUCKJURJHBA.wav-ecd874413f3d794d3ad44f3725173f88.sample"
+
+[deps]
+
+source_file="res://Audio/FootSTEPS FINAL FUCKJURJHBA.wav"
+source_md5="e7beccf5bc864984945abaab15a106ed"
+
+dest_files=[ "res://.import/FootSTEPS FINAL FUCKJURJHBA.wav-ecd874413f3d794d3ad44f3725173f88.sample" ]
+dest_md5="9fa022dc2221c5c34cd8b09607920f4a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

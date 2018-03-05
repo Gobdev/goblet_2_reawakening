@@ -1,35 +1,36 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://Scripts/MC.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=13]
-[ext_resource path="res://Scripts/CameraWorld2.gd" type="Script" id=14]
-[ext_resource path="res://Sprites/Random Tiles 1/exterior-parallaxBG1.png" type="Texture" id=15]
-[ext_resource path="res://tilesets/tileset2.tres" type="TileSet" id=16]
-[ext_resource path="res://jungledirt.tres" type="TileSet" id=17]
-[ext_resource path="res://tilesets/tileset2NOCOLL.tres" type="TileSet" id=18]
-[ext_resource path="res://Audio/Windfall GOBLET.wav" type="AudioStream" id=19]
-[ext_resource path="res://Scripts/Music.gd" type="Script" id=20]
+[ext_resource path="res://World2.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/MC.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/CameraWorld2.gd" type="Script" id=15]
+[ext_resource path="res://Sprites/Random Tiles 1/exterior-parallaxBG1.png" type="Texture" id=16]
+[ext_resource path="res://tilesets/tileset2.tres" type="TileSet" id=17]
+[ext_resource path="res://jungledirt.tres" type="TileSet" id=18]
+[ext_resource path="res://tilesets/tileset2NOCOLL.tres" type="TileSet" id=19]
+[ext_resource path="res://Audio/Windfall GOBLET.wav" type="AudioStream" id=20]
+[ext_resource path="res://Scripts/Music.gd" type="Script" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 12.0
@@ -48,6 +49,7 @@ extents = Vector2( 13, 10.8333 )
 
 [node name="World" type="Node2D" index="0"]
 
+script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="MC" type="KinematicBody2D" parent="." index="0"]
@@ -57,7 +59,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -102,7 +104,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
-script = ExtResource( 14 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 __meta__ = {
 "_edit_lock_": true
@@ -163,7 +165,7 @@ __meta__ = {
 
 position = Vector2( -1312, -32 )
 scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -172,7 +174,7 @@ __meta__ = {
 
 position = Vector2( -800, -32 )
 scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -181,7 +183,7 @@ __meta__ = {
 
 position = Vector2( -288, -32 )
 scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -190,7 +192,7 @@ __meta__ = {
 
 position = Vector2( 224, -32 )
 scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -211,25 +213,25 @@ __meta__ = {
 
 position = Vector2( -1312, -32 )
 scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 [node name="Sprite3" type="Sprite" parent="Backgrounds2" index="1"]
 
 position = Vector2( -800, -32 )
 scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 [node name="Sprite4" type="Sprite" parent="Backgrounds2" index="2"]
 
 position = Vector2( -288, -32 )
 scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 [node name="Sprite5" type="Sprite" parent="Backgrounds2" index="3"]
 
 position = Vector2( 224, -32 )
 scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 [node name="TileMaps" type="Node2D" parent="." index="5"]
 
@@ -240,7 +242,7 @@ __meta__ = {
 [node name="TileMap" type="TileMap" parent="TileMaps" index="0"]
 
 mode = 0
-tile_set = ExtResource( 16 )
+tile_set = ExtResource( 17 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -264,7 +266,7 @@ __meta__ = {
 [node name="TileMap2" type="TileMap" parent="TileMaps" index="1"]
 
 mode = 0
-tile_set = ExtResource( 17 )
+tile_set = ExtResource( 18 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -288,7 +290,7 @@ __meta__ = {
 [node name="TileMapNOCOLL" type="TileMap" parent="TileMaps" index="2"]
 
 mode = 0
-tile_set = ExtResource( 18 )
+tile_set = ExtResource( 19 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -311,11 +313,11 @@ __meta__ = {
 
 [node name="Music" type="AudioStreamPlayer" parent="." index="6"]
 
-stream = ExtResource( 19 )
+stream = ExtResource( 20 )
 volume_db = 4.19
-autoplay = true
+autoplay = false
 mix_target = 0
 bus = "Master"
-script = ExtResource( 20 )
+script = ExtResource( 21 )
 
 

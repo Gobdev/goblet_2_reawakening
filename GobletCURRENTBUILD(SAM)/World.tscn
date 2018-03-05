@@ -313,7 +313,6 @@ __meta__ = {
 
 [node name="Teleporter" type="Area2D" parent="." index="3"]
 
-editor/display_folded = true
 position = Vector2( 980, 160 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

@@ -327,7 +327,7 @@ volume_db = 4.19
 autoplay = false
 mix_target = 0
 bus = "Master"
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 _sections_unfolded = [ "Pause" ]
 
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Windfall GOBLET.wav-79eaa7a3ec2e83677ad617506fb57744.sample"
+
+[deps]
+
+source_file="res://Audio/Windfall GOBLET.wav"
+source_md5="74d6a203c9316caa4b7dfdb5dc515566"
+
+dest_files=[ "res://.import/Windfall GOBLET.wav-79eaa7a3ec2e83677ad617506fb57744.sample" ]
+dest_md5="c2e203acf9d0dd2acb08d74e355705f6"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

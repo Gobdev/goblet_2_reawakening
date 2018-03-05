@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WAKATAOJ.wav-979b1e92b58b7e9022da2f52f424d7f2.sample"
+
+[deps]
+
+source_file="res://Audio/WAKATAOJ.wav"
+source_md5="35d77415502b50cfdc146f0204318eba"
+
+dest_files=[ "res://.import/WAKATAOJ.wav-979b1e92b58b7e9022da2f52f424d7f2.sample" ]
+dest_md5="c8553fe11b0cfde81aab39904a1cd34c"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

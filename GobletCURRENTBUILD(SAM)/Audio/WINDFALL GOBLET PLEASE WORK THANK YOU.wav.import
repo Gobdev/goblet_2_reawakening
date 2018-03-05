@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WINDFALL GOBLET PLEASE WORK THANK YOU.wav-85fa4a35f5909fcf3ce070f58219cd2b.sample"
+
+[deps]
+
+source_file="res://Audio/WINDFALL GOBLET PLEASE WORK THANK YOU.wav"
+source_md5="ee2b2ff0743e99c0512436377cb67b75"
+
+dest_files=[ "res://.import/WINDFALL GOBLET PLEASE WORK THANK YOU.wav-85fa4a35f5909fcf3ce070f58219cd2b.sample" ]
+dest_md5="ebe60dcf77be4342e69ad53add431660"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

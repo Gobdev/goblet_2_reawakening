@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/exterior-parallaxBG1.png-9b1622cd608dea013c930f44df25e451.stex"
+
+[deps]
+
+source_file="res://Sprites/Random Tiles 1/exterior-parallaxBG1.png"
+source_md5="232774c6e18ef4952eba6ea8a9505137"
+
+dest_files=[ "res://.import/exterior-parallaxBG1.png-9b1622cd608dea013c930f44df25e451.stex" ]
+dest_md5="1f26149d1f35ee5a26f3404eb311b92b"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

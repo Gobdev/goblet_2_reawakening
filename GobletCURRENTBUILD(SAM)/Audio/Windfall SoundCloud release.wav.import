@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Windfall SoundCloud release.wav-6af7b6f5e8ed3b9aac67881a015ff19f.sample"
+
+[deps]
+
+source_file="res://Audio/Windfall SoundCloud release.wav"
+source_md5="49026c5afd02ba87bc7e7215f7a066c4"
+
+dest_files=[ "res://.import/Windfall SoundCloud release.wav-6af7b6f5e8ed3b9aac67881a015ff19f.sample" ]
+dest_md5="28806e4c077e91e9559e2523cb2b412d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

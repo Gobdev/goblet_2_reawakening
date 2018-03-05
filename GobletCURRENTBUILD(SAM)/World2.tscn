@@ -2,21 +2,21 @@
 
 [ext_resource path="res://World2.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/MC.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/CameraWorld2.gd" type="Script" id=15]
 [ext_resource path="res://Audio/FootSTEPS FINAL FUCKJURJHBA.wav" type="AudioStream" id=16]
-[ext_resource path="res://Sprites/Random Tiles 1/exterior-parallaxBG1.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Tiles/Sky.png" type="Texture" id=17]
 [ext_resource path="res://tilesets/tileset2.tres" type="TileSet" id=18]
 [ext_resource path="res://jungledirt.tres" type="TileSet" id=19]
 [ext_resource path="res://tilesets/tileset2NOCOLL.tres" type="TileSet" id=20]
@@ -26,15 +26,15 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -165,84 +165,38 @@ shape = SubResource( 3 )
 editor/display_folded = true
 show_behind_parent = true
 _sections_unfolded = [ "Visibility" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
-[node name="Sprite2" type="Sprite" parent="Backgrounds" index="0"]
+[node name="Background" type="Sprite" parent="Backgrounds" index="0"]
 
-position = Vector2( -1312, -32 )
-scale = Vector2( 2.06333, 2.06333 )
+position = Vector2( -840, -550 )
 texture = ExtResource( 17 )
-__meta__ = {
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Transform" ]
 
-[node name="Sprite3" type="Sprite" parent="Backgrounds" index="1"]
+[node name="Background5" type="Sprite" parent="Backgrounds" index="1"]
 
-position = Vector2( -800, -32 )
-scale = Vector2( 2.06333, 2.06333 )
+position = Vector2( -830, 90 )
 texture = ExtResource( 17 )
-__meta__ = {
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Transform" ]
 
-[node name="Sprite4" type="Sprite" parent="Backgrounds" index="2"]
+[node name="Background3" type="Sprite" parent="Backgrounds" index="2"]
 
-position = Vector2( -288, -32 )
-scale = Vector2( 2.06333, 2.06333 )
+position = Vector2( -190, 90 )
 texture = ExtResource( 17 )
-__meta__ = {
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Transform" ]
 
-[node name="Sprite5" type="Sprite" parent="Backgrounds" index="3"]
+[node name="Background4" type="Sprite" parent="Backgrounds" index="3"]
 
-position = Vector2( 224, -32 )
-scale = Vector2( 2.06333, 2.06333 )
+position = Vector2( -210, -490 )
 texture = ExtResource( 17 )
-__meta__ = {
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Transform" ]
 
-[node name="Backgrounds2" type="Node2D" parent="." index="4"]
+[node name="Background2" type="Sprite" parent="Backgrounds" index="4"]
 
-editor/display_folded = true
-show_behind_parent = true
-position = Vector2( -1087.29, -672.337 )
-rotation = 3.14159
-_sections_unfolded = [ "Transform", "Visibility" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="Sprite2" type="Sprite" parent="Backgrounds2" index="0"]
-
-position = Vector2( -1312, -32 )
-scale = Vector2( 2.06333, 2.06333 )
+position = Vector2( -1470, -190 )
 texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="Sprite3" type="Sprite" parent="Backgrounds2" index="1"]
-
-position = Vector2( -800, -32 )
-scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 17 )
-
-[node name="Sprite4" type="Sprite" parent="Backgrounds2" index="2"]
-
-position = Vector2( -288, -32 )
-scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 17 )
-
-[node name="Sprite5" type="Sprite" parent="Backgrounds2" index="3"]
-
-position = Vector2( 224, -32 )
-scale = Vector2( 2.06333, 2.06333 )
-texture = ExtResource( 17 )
-
-[node name="TileMaps" type="Node2D" parent="." index="5"]
+[node name="TileMaps" type="Node2D" parent="." index="4"]
 
 __meta__ = {
 "_edit_lock_": true
@@ -320,7 +274,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Music" type="AudioStreamPlayer" parent="." index="6"]
+[node name="Music" type="AudioStreamPlayer" parent="." index="5"]
 
 stream = ExtResource( 21 )
 volume_db = 4.19

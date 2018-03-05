@@ -34,6 +34,7 @@ func _physics_process(delta):
 		
 		motion.y = GRAVITY #Resets gravity to default when on floor
 		MAXSPEED = 200
+			
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = JUMP_HEIGHT
 		if friction == true: #Friction on floor

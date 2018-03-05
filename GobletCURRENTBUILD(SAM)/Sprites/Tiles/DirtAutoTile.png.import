@@ -10,7 +10,7 @@ source_file="res://Sprites/Tiles/DirtAutoTile.png"
 source_md5="375e8c04bacf24f5314a1751a2dc3f29"
 
 dest_files=[ "res://.import/DirtAutoTile.png-37fd3fa35dbe398a629f83eb69626ffa.stex" ]
-dest_md5="e8524512ff2c435a6f6c2ef49d6b95cc"
+dest_md5="c5c9c36d576c2ee87ff546790e488a06"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

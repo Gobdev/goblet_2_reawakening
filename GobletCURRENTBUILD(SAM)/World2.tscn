@@ -1,19 +1,19 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://World2.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/MC.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/CameraWorld2.gd" type="Script" id=15]
 [ext_resource path="res://Audio/FootSTEPS FINAL FUCKJURJHBA.wav" type="AudioStream" id=16]
 [ext_resource path="res://Sprites/Tiles/Sky.png" type="Texture" id=17]
@@ -22,19 +22,20 @@
 [ext_resource path="res://tilesets/tileset2NOCOLL.tres" type="TileSet" id=20]
 [ext_resource path="res://Audio/Windfall GOBLET.wav" type="AudioStream" id=21]
 [ext_resource path="res://Scripts/Music.gd" type="Script" id=22]
+[ext_resource path="res://tilesets/DirtAutoTiles.tres" type="TileSet" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 12.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -78,7 +79,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 0.868042, 0.363556 )
 scale = Vector2( 1, 1.02193 )
 shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Camera2D" type="Camera2D" parent="MC" index="2"]
 
@@ -121,7 +122,6 @@ bus = "Master"
 
 [node name="InvisBorderLeft" type="StaticBody2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( -1664, 0 )
 scale = Vector2( 1, 5 )
 input_pickable = false
@@ -143,7 +143,6 @@ shape = SubResource( 3 )
 
 [node name="InvisBorderRight" type="StaticBody2D" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( -96, 0 )
 scale = Vector2( 1, 5 )
 input_pickable = false
@@ -198,6 +197,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="TileMaps" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -283,5 +283,25 @@ mix_target = 0
 bus = "Master"
 script = ExtResource( 22 )
 _sections_unfolded = [ "Pause" ]
+
+[node name="DirtAutoTile" type="TileMap" parent="." index="6"]
+
+mode = 0
+tile_set = ExtResource( 23 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 131068, 0, 196608, 131069, 0, 196610 )
 
 

@@ -319,5 +319,6 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 script = ExtResource( 21 )
+_sections_unfolded = [ "Pause" ]
 
 

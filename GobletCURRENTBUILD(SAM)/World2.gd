@@ -14,7 +14,7 @@ func _ready():
 	t.start()
 	yield(t, "timeout")
 	t.queue_free()
-	self.get_node("Music").play()
+	self.get_node("Music").allow_play()
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

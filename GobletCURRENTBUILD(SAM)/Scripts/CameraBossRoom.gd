@@ -11,7 +11,6 @@ func _ready():
 	
 	# Called every time the node is added to the scene.
 	# Initialization here
-	pass
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
@@ -20,5 +19,5 @@ func _ready():
 
 
 func _on_CamZoom_body_exited(body):
-	set_zoom(0.5, 0.5)
+	set_zoom(Vector2(2, 2))
 	pass # replace with function body

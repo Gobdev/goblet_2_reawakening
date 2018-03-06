@@ -55,7 +55,7 @@ extents = Vector2( 10, 11.8841 )
 
 [node name="NOCOLL" type="TileMap" parent="." index="0"]
 
-modulate = Color( 0.609375, 0.609375, 0.609375, 1 )
+modulate = Color( 0.785156, 0.785156, 0.785156, 1 )
 show_behind_parent = true
 mode = 0
 tile_set = ExtResource( 1 )
@@ -78,7 +78,7 @@ _sections_unfolded = [ "Cell", "Transform", "Visibility" ]
 
 [node name="MC" type="KinematicBody2D" parent="." index="1"]
 
-position = Vector2( 260, 80 )
+position = Vector2( -1720, -30 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

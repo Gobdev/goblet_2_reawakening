@@ -6,7 +6,7 @@ extends Camera2D
 
 func _ready():
 	set_drag_margin(MARGIN_LEFT, -0.2)
-	set_limit(MARGIN_LEFT, -1500)
+	set_limit(MARGIN_LEFT, -2000)
 	set_limit(MARGIN_RIGHT, 3000)
 	
 	# Called every time the node is added to the scene.

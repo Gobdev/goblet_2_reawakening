@@ -219,8 +219,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CamZoom" type="Area2D" parent="." index="6"]
 
-editor/display_folded = true
-visible = false
 position = Vector2( 730, -30 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -229,20 +227,16 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CamZoom" index="0"]
 
-position = Vector2( 800, -220 )
+position = Vector2( 846.728, -223.015 )
 scale = Vector2( 40.25, 6.19767 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CamRaise" type="Area2D" parent="." index="7"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -250,22 +244,15 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CamRaise" index="0"]
 
-position = Vector2( 1552.88, -300 )
+position = Vector2( 1599.36, -306.696 )
 scale = Vector2( 82.5288, 25.0247 )
 shape = SubResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CamRaiseReverse" type="Area2D" parent="." index="8"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -273,18 +260,12 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CamRaiseReverse" index="0"]
 
 position = Vector2( 450, 70 )
 scale = Vector2( 0.769234, 1.42673 )
 shape = SubResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [connection signal="body_entered" from="CamZoom" to="MC/Camera2D" method="_on_CamZoom_body_entered"]
 

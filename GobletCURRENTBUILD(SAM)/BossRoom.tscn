@@ -1,19 +1,19 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://tilesets/NewTempTilesetNOCOLL.tres" type="TileSet" id=1]
 [ext_resource path="res://Scripts/MC.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/CameraBossRoom.gd" type="Script" id=15]
 [ext_resource path="res://Audio/FootSTEPS FINAL FUCKJURJHBA.wav" type="AudioStream" id=16]
 [ext_resource path="res://tilesets/DirtAutoTiles.tres" type="TileSet" id=17]
@@ -24,15 +24,15 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 12.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -44,7 +44,12 @@ height = 34.7156
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 40 )
+extents = Vector2( 20, 40 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.8841 )
 
 [node name="BossRoom" type="Node" index="0"]
 
@@ -73,7 +78,7 @@ _sections_unfolded = [ "Cell", "Transform", "Visibility" ]
 
 [node name="MC" type="KinematicBody2D" parent="." index="1"]
 
-position = Vector2( -1390, 90 )
+position = Vector2( 260, 80 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -153,6 +158,9 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 524288, 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TileMap" type="TileMap" parent="." index="3"]
 
@@ -174,6 +182,9 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 65475, 7, 0, 65476, 7, 0, 65477, 7, 0, 65478, 7, 0, 65479, 7, 0, 65480, 7, 0, 65481, 7, 0, 65482, 7, 0, 65483, 6, 0, 131019, 0, 0, 131020, 6, 0, 196556, 0, 0, 196557, 6, 0, 262093, 0, 0, 262094, 6, 0, 327630, 0, 0, 327631, 6, 0 )
 _sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TileMap2" type="TileMap" parent="." index="4"]
 
@@ -193,18 +204,23 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 22, 10, 0, 23, 10, 0, 24, 10, 0, 25, 10, 0, 26, 10, 0, 27, 10, 0, 28, 10, 0, 29, 10, 0, 30, 10, 0, 31, 10, 0, 32, 10, 0, 33, 10, 0, 34, 10, 0, 35, 10, 0, 36, 10, 0, 37, 10, 0, 38, 10, 0, 39, 10, 0, 40, 10, 0, 41, 10, 0, 42, 10, 0, 43, 10, 0, 44, 10, 0, 45, 10, 0, 46, 10, 0, 47, 10, 0, 48, 10, 0, 49, 10, 0, 50, 10, 0, 51, 10, 0, 52, 10, 0, 53, 10, 0, 54, 10, 0, 55, 10, 0, 56, 10, 0, 57, 10, 0, 58, 10, 0, 59, 10, 0, 60, 10, 0, 61, 10, 0, 62, 10, 0, 63, 10, 0, 64, 10, 0, 65, 10, 0, 66, 10, 0, 67, 10, 0, 68, 10, 0, 69, 10, 0, 70, 10, 0, 71, 10, 0, 72, 10, 0, 73, 10, 0, 74, 10, 0, 65555, 10, 0, 65556, 10, 0, 65557, 10, 0, 131088, 10, 0, 131089, 10, 0, 131090, 10, 0, 196621, 10, 0, 196622, 10, 0, 196623, 10, 0, 327632, 10, 0, 327633, 10, 0, 327634, 10, 0, 327635, 10, 0, 327636, 10, 0, 327637, 10, 0, 327638, 10, 0, 327639, 10, 0, 327640, 10, 0, 327641, 10, 0, 327642, 10, 0, 327643, 10, 0, 327644, 10, 0, 327645, 10, 0, 327646, 10, 0, 327647, 10, 0, 327648, 10, 0, 327649, 10, 0, 327650, 10, 0, 327651, 10, 0, 327652, 10, 0, 327653, 10, 0, 327654, 10, 0, 327655, 10, 0, 327656, 10, 0, 327657, 10, 0, 327658, 10, 0, 327659, 10, 0, 327660, 10, 0, 327661, 10, 0, 327662, 10, 0, 327663, 10, 0, 327664, 10, 0, 327665, 10, 0, 327666, 10, 0, 327667, 10, 0, 327668, 10, 0, 327669, 10, 0, 327670, 10, 0, 327671, 10, 0, 327672, 10, 0, 327673, 10, 0, 327674, 10, 0, 327675, 10, 0, 327676, 10, 0, 327677, 10, 0, 327678, 10, 0, 327679, 10, 0, 262144, 10, 0, 262145, 10, 0, 262146, 10, 0, 262147, 10, 0, 262148, 10, 0, 262149, 10, 0, 262150, 10, 0, 262151, 10, 0, 262152, 10, 0, 262153, 10, 0, 262154, 10, 0, 262155, 10, 0, 262156, 10, 0 )
+tile_data = PoolIntArray( 22, 10, 0, 23, 10, 0, 24, 10, 0, 25, 10, 0, 26, 10, 0, 27, 10, 0, 28, 10, 0, 29, 10, 0, 30, 10, 0, 31, 10, 0, 32, 10, 0, 33, 10, 0, 34, 10, 0, 35, 10, 0, 36, 10, 0, 37, 10, 0, 38, 10, 0, 39, 10, 0, 40, 10, 0, 41, 10, 0, 42, 10, 0, 43, 10, 0, 44, 10, 0, 45, 10, 0, 46, 10, 0, 47, 10, 0, 48, 10, 0, 49, 10, 0, 50, 10, 0, 51, 10, 0, 52, 10, 0, 53, 10, 0, 54, 10, 0, 55, 10, 0, 56, 10, 0, 57, 10, 0, 58, 10, 0, 59, 10, 0, 60, 10, 0, 61, 10, 0, 62, 10, 0, 63, 10, 0, 64, 10, 0, 65, 10, 0, 66, 10, 0, 67, 10, 0, 68, 10, 0, 69, 10, 0, 70, 10, 0, 71, 10, 0, 72, 10, 0, 73, 10, 0, 74, 10, 0, 75, 10, 0, 76, 10, 0, 77, 10, 0, 78, 10, 0, 79, 10, 0, 80, 10, 0, 81, 10, 0, 82, 10, 0, 83, 10, 0, 84, 10, 0, 85, 10, 0, 86, 10, 0, 87, 10, 0, 88, 10, 0, 89, 10, 0, 90, 10, 0, 91, 10, 0, 92, 10, 0, 93, 10, 0, 94, 10, 0, 95, 10, 0, 65555, 10, 0, 65556, 10, 0, 65557, 10, 0, 131088, 10, 0, 131089, 10, 0, 131090, 10, 0, 196621, 10, 0, 196622, 10, 0, 196623, 10, 0, 327632, 10, 0, 327633, 10, 0, 327634, 10, 0, 327635, 10, 0, 327636, 10, 0, 327637, 10, 0, 327638, 10, 0, 327639, 10, 0, 327640, 10, 0, 327641, 10, 0, 327642, 10, 0, 327643, 10, 0, 327644, 10, 0, 327645, 10, 0, 327646, 10, 0, 327647, 10, 0, 327648, 10, 0, 327649, 10, 0, 327650, 10, 0, 327651, 10, 0, 327652, 10, 0, 327653, 10, 0, 327654, 10, 0, 327655, 10, 0, 327656, 10, 0, 327657, 10, 0, 327658, 10, 0, 327659, 10, 0, 327660, 10, 0, 327661, 10, 0, 327662, 10, 0, 327663, 10, 0, 327664, 10, 0, 327665, 10, 0, 327666, 10, 0, 327667, 10, 0, 327668, 10, 0, 327669, 10, 0, 327670, 10, 0, 327671, 10, 0, 327672, 10, 0, 327673, 10, 0, 327674, 10, 0, 327675, 10, 0, 327676, 10, 0, 327677, 10, 0, 327678, 10, 0, 327679, 10, 0, 262144, 10, 0, 262145, 10, 0, 262146, 10, 0, 262147, 10, 0, 262148, 10, 0, 262149, 10, 0, 262150, 10, 0, 262151, 10, 0, 262152, 10, 0, 262153, 10, 0, 262154, 10, 0, 262155, 10, 0, 262156, 10, 0 )
 _sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="BossSprite" type="Sprite" parent="." index="5"]
 
-position = Vector2( 1560, -190 )
+position = Vector2( 1900, -190 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 20 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CamZoom" type="Area2D" parent="." index="6"]
 
+editor/display_folded = true
+visible = false
 position = Vector2( 730, -30 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -213,13 +229,69 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CamZoom" index="0"]
 
-position = Vector2( 0, 20 )
+position = Vector2( 800, -220 )
+scale = Vector2( 40.25, 6.19767 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="CamRaise" type="Area2D" parent="." index="7"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CamRaise" index="0"]
+
+position = Vector2( 1552.88, -300 )
+scale = Vector2( 82.5288, 25.0247 )
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CamRaiseReverse" type="Area2D" parent="." index="8"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CamRaiseReverse" index="0"]
+
+position = Vector2( 450, 70 )
+scale = Vector2( 0.769234, 1.42673 )
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="body_entered" from="CamZoom" to="MC/Camera2D" method="_on_CamZoom_body_entered"]
+
 [connection signal="body_exited" from="CamZoom" to="MC/Camera2D" method="_on_CamZoom_body_exited"]
+
+[connection signal="body_entered" from="CamRaise" to="MC/Camera2D" method="_on_CamRaise_body_entered"]
+
+[connection signal="body_entered" from="CamRaiseReverse" to="MC/Camera2D" method="_on_CamRaise2_body_entered"]
 
 

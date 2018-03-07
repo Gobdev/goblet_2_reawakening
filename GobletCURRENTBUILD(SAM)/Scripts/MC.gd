@@ -50,10 +50,10 @@ func _physics_process(delta):
 		$Sprite.play("Idle")
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.1)
-		if motion.y < 0 and Input.is_action_just_pressed("ui_left"):
-			MAXSPEED = 125
-		if motion.y < 0 and Input.is_action_just_pressed("ui_right"):
-			MAXSPEED = 125
+		#if motion.y < 0 and Input.is_action_just_pressed("ui_left"):
+			#MAXSPEED = 125
+		#if motion.y < 0 and Input.is_action_just_pressed("ui_right"):
+			#MAXSPEED = 125
 			
 		
 	#Alternatively, for other gravity method change this to motion = move_and_slide(motion, UP)

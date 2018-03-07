@@ -38,7 +38,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = JUMP_HEIGHT
 		if friction == true: #Friction on floor
-			motion.x = lerp(motion.x, 0, 0.4)
+			motion.x = lerp(motion.x, 0, 0.35)
 		if Input.is_action_pressed("ui_sprint"): #Sprint function
 			MAXSPEED = 275
 		elif Input.is_action_just_released("ui_sprint"):

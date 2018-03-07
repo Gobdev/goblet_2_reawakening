@@ -51,7 +51,9 @@ ui_sprint=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resou
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
 quality/2d/use_pixel_snap=true
+threads/thread_model=2
 quality/filters/use_nearest_mipmap_filter=true
 environment/default_clear_color=Color( 0.5625, 0.5625, 0.5625, 1 )
 environment/default_environment="res://default_env.tres"

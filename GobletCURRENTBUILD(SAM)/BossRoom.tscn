@@ -1,35 +1,36 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://tilesets/NewTempTilesetNOCOLL.tres" type="TileSet" id=1]
-[ext_resource path="res://Scripts/MC.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=14]
-[ext_resource path="res://Scripts/CameraBossRoom.gd" type="Script" id=15]
-[ext_resource path="res://Audio/FootSTEPS FINAL FUCKJURJHBA.wav" type="AudioStream" id=16]
-[ext_resource path="res://tilesets/DirtAutoTiles.tres" type="TileSet" id=17]
-[ext_resource path="res://tilesets/tileset2.tres" type="TileSet" id=18]
-[ext_resource path="res://tilesets/NewTempTileets.tres" type="TileSet" id=19]
-[ext_resource path="res://Sprites/gobletboss.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Tiles/Sky.png" type="Texture" id=1]
+[ext_resource path="res://tilesets/NewTempTilesetNOCOLL.tres" type="TileSet" id=2]
+[ext_resource path="res://Scripts/MC.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/MC_idle/0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/MC_idle/1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/MC_idle/2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/MC_idle/3.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/MC_walk/0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/MC_walk/1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/MC_walk/2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/MC_walk/3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/MC_walk/4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/MC_walk/5.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/MC_walk/6.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/MC_walk/7.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/CameraBossRoom.gd" type="Script" id=16]
+[ext_resource path="res://Audio/FootSTEPS FINAL FUCKJURJHBA.wav" type="AudioStream" id=17]
+[ext_resource path="res://tilesets/DirtAutoTiles.tres" type="TileSet" id=18]
+[ext_resource path="res://tilesets/tileset2.tres" type="TileSet" id=19]
+[ext_resource path="res://tilesets/NewTempTileets.tres" type="TileSet" id=20]
+[ext_resource path="res://Sprites/gobletboss.png" type="Texture" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 12.0
@@ -53,12 +54,62 @@ extents = Vector2( 10, 11.8841 )
 
 [node name="BossRoom" type="Node" index="0"]
 
-[node name="NOCOLL" type="TileMap" parent="." index="0"]
+[node name="Bckgrnd" type="Node" parent="." index="0"]
+
+[node name="Bckgrnd" type="Sprite" parent="Bckgrnd" index="0"]
+
+modulate = Color( 0.617188, 0.617188, 0.617188, 1 )
+show_behind_parent = true
+position = Vector2( -1630, -60 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Bckgrnd2" type="Sprite" parent="Bckgrnd" index="1"]
+
+modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
+show_behind_parent = true
+position = Vector2( -990, 50 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Bckgrnd3" type="Sprite" parent="Bckgrnd" index="2"]
+
+modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
+show_behind_parent = true
+position = Vector2( -350, 10 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Bckgrnd4" type="Sprite" parent="Bckgrnd" index="3"]
+
+modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
+show_behind_parent = true
+position = Vector2( 290, 50 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Bckgrnd5" type="Sprite" parent="Bckgrnd" index="4"]
+
+modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
+show_behind_parent = true
+position = Vector2( 930, -200 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Bckgrnd6" type="Sprite" parent="Bckgrnd" index="5"]
+
+modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
+show_behind_parent = true
+position = Vector2( 1570, -270 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="NOCOLL" type="TileMap" parent="." index="1"]
 
 modulate = Color( 0.785156, 0.785156, 0.785156, 1 )
 show_behind_parent = true
 mode = 0
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -75,15 +126,18 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -65544, 0, 0, -65543, 14, 0, -20, 2, 0, -19, 10, 0, -18, 10, 0, -17, 10, 0, -16, 8, 0, -9, 14, 0, -8, 536870919, 0, -7, 7, 0, -6, 536870918, 0, 65517, -1610612725, 0, 65518, 3, 0, 65519, 11, 0, 65526, 14, 0, 65527, 11, 0, 65530, -1610612725, 0, 65531, 536870918, 0, 131044, 15, 0, 131045, 15, 0, 131054, 3, 0, 131061, 14, 0, 131062, 11, 0, 131067, -1610612725, 0, 131068, 536870918, 0, 196579, 15, 0, 196580, 15, 0, 196581, 15, 0, 196590, 3, 0, 196597, 3, 0, 196604, 3, 0, 262114, 15, 0, 262115, 15, 0, 262116, 15, 0, 262117, 15, 0, 262126, 3, 0, 262130, 1610612747, 0, 262131, -1073741811, 0, 262133, 3, 0, 262140, 3, 0, 196609, 6, 0, 196610, 8, 0 )
 _sections_unfolded = [ "Cell", "Transform", "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="MC" type="KinematicBody2D" parent="." index="1"]
+[node name="MC" type="KinematicBody2D" parent="." index="2"]
 
 position = Vector2( -1720, -30 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -128,21 +182,21 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
-script = ExtResource( 15 )
+script = ExtResource( 16 )
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="MC" index="3"]
 
-stream = ExtResource( 16 )
+stream = ExtResource( 17 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="DirtAutoTiles" type="TileMap" parent="." index="2"]
+[node name="DirtAutoTiles" type="TileMap" parent="." index="3"]
 
 mode = 0
-tile_set = ExtResource( 17 )
+tile_set = ExtResource( 18 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -162,10 +216,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TileMap" type="TileMap" parent="." index="3"]
+[node name="TileMap" type="TileMap" parent="." index="4"]
 
 mode = 0
-tile_set = ExtResource( 18 )
+tile_set = ExtResource( 19 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -186,10 +240,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TileMap2" type="TileMap" parent="." index="4"]
+[node name="TileMap2" type="TileMap" parent="." index="5"]
 
 mode = 0
-tile_set = ExtResource( 19 )
+tile_set = ExtResource( 20 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -210,14 +264,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="BossSprite" type="Sprite" parent="." index="5"]
+[node name="BossSprite" type="Sprite" parent="." index="6"]
 
 position = Vector2( 1900, -190 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
+texture = ExtResource( 21 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CamZoom" type="Area2D" parent="." index="6"]
+[node name="CamZoom" type="Area2D" parent="." index="7"]
 
 position = Vector2( 730, -30 )
 input_pickable = true
@@ -235,7 +289,7 @@ scale = Vector2( 40.25, 6.19767 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CamRaise" type="Area2D" parent="." index="7"]
+[node name="CamRaise" type="Area2D" parent="." index="8"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -251,7 +305,7 @@ position = Vector2( 1599.36, -306.696 )
 scale = Vector2( 82.5288, 25.0247 )
 shape = SubResource( 4 )
 
-[node name="CamRaiseReverse" type="Area2D" parent="." index="8"]
+[node name="CamRaiseReverse" type="Area2D" parent="." index="9"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

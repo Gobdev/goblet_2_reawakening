@@ -52,7 +52,7 @@ extents = Vector2( 20, 40 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.8841 )
 
-[node name="BossRoom" type="Node" index="0"]
+[node name="BossRoom" type="Node"]
 
 [node name="Bckgrnd" type="Node" parent="." index="0"]
 

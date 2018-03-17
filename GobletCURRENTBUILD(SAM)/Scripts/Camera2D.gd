@@ -5,7 +5,7 @@ extends Camera2D
 # var b = "textvar"
 
 func _ready():
-	set_drag_margin(MARGIN_LEFT, -0.2)
+	set_drag_margin(MARGIN_LEFT, -0.4)
 	set_limit(MARGIN_LEFT, -1500)
 	set_limit(MARGIN_RIGHT, 1050)
 	
